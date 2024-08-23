@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+message DeviceInfo {
+    enum DeviceType {
+        IOS = 0;
+        ANDROID = 1;
+        BROWSER = 2;
+    }
+    string secret = 1;
+    string appVer = 2;
+    DeviceType deviceType = 3;
+    string osVer = 4;
+    bool isTablet = 5;
+}
+message BookStorePage {
+    message Message {
+        // 仅包含需要解析的内容
+        message NestedMessage3 {
+            message NestedDetail {
+                int32 id = 1;                // 例如: 27095
+                string date = 2;                // 例如: "２０２４年８月号"
+                string thumbnail = 3;                // 例如: "/j/1Czwop/6Dn.webp?h=4b_aLN1HycKhPj3FaGI-MA&e=5000000000"
+                int32 field4 = 4;                // 例如: 770
+                int32 field8 = 8;                // 例如: 15
+                string updateDate1 = 10;              // 例如: "2024/07/12 発売"
+                string updateDate2 = 11;              // 例如: "2025/07/11"
+                string firstImage = 14;              // 例如: "/k/1Czx81/6Dn/0.jpeg.enc?h=rypcm26ihdD46NFszivA4g&e=1721228400"
+                string magazineName = 17;              // 例如: "花音"
+                string updateDate3 = 20;              // 例如: "2025-07-11"
+            }
+
+            repeated NestedDetail details = 3;   // 多个细节消息
+        }
+
+        // 仅包含需要解析的字段
+        repeated NestedMessage3 nested_message3 = 3;
+    }
+    Message info = 1;
+}
+
+message BookStorePageRequest {
+    DeviceInfo deviceInfo = 1;
+}

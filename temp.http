@@ -1,0 +1,21 @@
+### 发送信息
+POST http://127.0.0.1:8082/send_group_msg
+Content-Type: application/json
+
+{
+  "group_id": 104303,
+  "message": "qwq"
+}
+
+### 上传群文件
+POST http://127.0.0.1:8082/upload_group_file
+Content-Type: application/json
+
+{
+  "group_id": 104303,
+  "file": "D:\\misaka10843\\Downloads\\protoc-27.3-win64.zip",
+  "name": "protoc-27.3-win64.zip"
+}
+
+###
+
