@@ -2,7 +2,7 @@
 
 ## 简介
 
-[ComicFuz-Downloader](https://github.com/misaka10843/ComicFuz-Downloader)的Mini Ver，致力于能够第一时间获取杂志信息并且自动下载
+[ComicFuz-Downloader](https://github.com/misaka10843/ComicFuz-Downloader)的Mini OneBot Ver，致力于能够第一时间获取杂志信息并且自动下载
 
 ## 支持功能
 
@@ -17,6 +17,17 @@
 * 下载出错时等待5s后自动重试
 * ~~**批量下载(详细请见命令示例)**~~
 
+### OneBot Ver的特别功能
+
+* Mini Ver的功能
+* [WIP]支持下载压缩完成之后上传至qq群
+* [WIP]支持下载压缩完成之后上传至Onedrive
+
+## 更多版本
+
+* [Full Ver](https://github.com/misaka10843/ComicFuz-Downloader) 全功能版，但是可能并没有怎么维护
+* [Mini Ver](https://github.com/misaka10843/ComicFuz-MiniDownloader) ：精简版，仅支持杂志下载，支持调用/检测杂志更新
+
 ## Mini Ver与Full Ver的区别
 
 Mini Ver尽可能精简功能，删除了书籍/单话下载
@@ -26,6 +37,7 @@ Mini Ver尽可能精简功能，删除了书籍/单话下载
 在ComicFuz-MagazineDownloader中添加了更多的功能，如直接通过NoneBot的http正向来发送群文件
 
 添加半自动更新
+
 
 ## 如何使用
 
